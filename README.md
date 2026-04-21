@@ -61,7 +61,7 @@ Building this site from scratch taught me:
 ## Contact
 
 - **Email:** zlee337.zl@gmail.com
-- **GitHub:** [@zlee30](https://github.com/zlee30)
-- **LinkedIn:** [linkedin.com/in/wzlee337](https://linkedin.com/in/wzlee337)
+- **GitHub:** (https://github.com/zlee30)
+- **LinkedIn:** (https://linkedin.com/in/wzlee337)
 
 ---
