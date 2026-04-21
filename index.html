@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zach Lee — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Walker Zachary Lee</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="hero">
+    <img src="images/me.jfif" alt="Zach" class="avatar">
+    <h1>Hi, I'm Zach</h1>
+    <p class="tagline">Into tech, into sports, always into learning something new.</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>My projects</h2>
+    <div class="project-grid">
+
+      
+  <div class="project-card" onclick="openGallery('email-bot')">
+  <div class="project-image" style="background: #E6F1FB; display: flex; align-items: center; justify-content: center;">
+    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+      <path d="M2 7l10 6 10-6"></path>
+    </svg>
+  </div>
+  <h3>AI email responder bot</h3>
+  <p>A Gmail automation pipeline built in Python that authenticates via Google Cloud, fetches unread messages through the Gmail API, and generates tailored responses.</p>
+  <p class="tech-stack">Python · Gmail API · Google Cloud · Claude</p>
+  <span class="link">View screenshots →</span>
+</div>
+
+
+      <a href="https://github.com/zlee30/portfolio" target="_blank" class="project-card">
+  <div class="project-image" style="background: #E1F5EE; display: flex; align-items: center; justify-content: center;">
+    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="16 18 22 12 16 6"></polyline>
+      <polyline points="8 6 2 12 8 18"></polyline>
+    </svg>
+  </div>
+  <h3>This portfolio website</h3>
+  <p>The site you're looking at right now — built from scratch with HTML, CSS, and JavaScript to showcase my work. Features a responsive design and interactive project gallery.</p>
+  <p class="tech-stack">HTML · CSS · JavaScript</p>
+  <span class="link">View on GitHub →</span>
+</a>
+
+     
+
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About me</h2>
+    <p> I am a Computer Science graduate with a passion for technology, sports, and everything in between. I love exploring AI tools and finding creative ways to use them, whether it's for building projects, making art, or just figuring out what's possible. Outside of tech, I'm an athlete , an esports player, and someone who enjoys the creative side of things just as much as the technical </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get in touch</h2>
+    <div class="contact-links">
+      <a href="https://mail.google.com/mail/?view=cm&to=zlee337.zl@gmail.com" target="_blank">Email</a>
+      <a href="https://github.com/zlee30" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/wzlee337" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Zach Lee</p>
+  </footer>
+
+<div id="gallery" class="gallery" onclick="closeGallery()">
+  <span class="gallery-close">×</span>
+  <div class="gallery-content" onclick="event.stopPropagation()">
+    <img id="gallery-img" src="" alt="">
+    <div class="gallery-nav">
+      <button onclick="prevImage()">← Previous</button>
+      <span id="gallery-counter">1 / 3</span>
+      <button onclick="nextImage()">Next →</button>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+  
+
+</body>
+</html>
