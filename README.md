@@ -41,7 +41,7 @@ This site was designed and built from scratch to showcase my projects and give p
 If you want to run the site on your own computer:
 
 1. Clone the repository
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/zlee30/portfolio.git
 2. Open the folder
 cd portfolio
 3. Open `index.html` in your browser
