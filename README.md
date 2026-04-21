@@ -6,7 +6,7 @@ The personal portfolio website of Zach
 
 ## About
 
-This site was designed and built from scratch to showcase my projects and give people a quick way to learn who I am and what I build. No templates, no page builders — just hand-written HTML, CSS, and JavaScript.
+This site was designed and built from scratch to showcase my projects and give people a quick way to learn who I am and what I build. 
 
 ## Features
 
