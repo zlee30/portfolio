@@ -41,3 +41,27 @@ This site was designed and built from scratch to showcase my projects and give p
 If you want to run the site on your own computer:
 
 1. Clone the repository
+git clone https://github.com/yourusername/portfolio.git
+2. Open the folder
+cd portfolio
+3. Open `index.html` in your browser
+
+That's it — no build step, no dependencies.
+
+## What I learned
+
+Building this site from scratch taught me:
+
+- How to structure a multi-section single-page website
+- Responsive design principles using CSS Grid and Flexbox
+- Writing vanilla JavaScript for interactive UI elements
+- Deploying static sites with GitHub Pages
+- Organizing project files for maintainability
+
+## Contact
+
+- **Email:** zlee337.zl@gmail.com
+- **GitHub:** [@zlee30](https://github.com/zlee30)
+- **LinkedIn:** [linkedin.com/in/wzlee337](https://linkedin.com/in/wzlee337)
+
+---
