@@ -2,7 +2,7 @@
 
 The personal portfolio website of Zach 
 
-**Live site:** [zlee30.github.io/portfolio](https://yourusername.github.io/portfolio)
+**Live site:** [zlee30.github.io/portfolio]((https://zlee30.github.io/portfolio/))
 
 ## About
 
