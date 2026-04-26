@@ -10,7 +10,9 @@ function renderHistory(text) {
   history.textContent = text || '\u00A0';
 }
 
+
 function appendNum(n) {
+  if (current === 'Error') current = '0';
   if (current === '0' && n !== '.') {
     current = n;
   } else if (n === '.' && current.split(/[+\-*/()]/).pop().includes('.')) {
