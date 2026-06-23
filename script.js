@@ -4,9 +4,8 @@
 
 const galleries = {
   'email-bot': [
-    'images/email-bot-1.png',
-    'images/email-bot-2.png',
-    'images/email-bot-3.png'
+    'images/sscmd.png',
+    'images/ssgmail.png'
   ]
 };
 
@@ -113,7 +112,7 @@ function getThanks(txt) {
   if (/^(ok|okay|got it|sounds good|cool|great|nice|perfect|alright|awesome)[\s!.]*$/.test(t))
     return "Great! Feel free to ask if you have any other questions.";
   if (/^(bye|goodbye|see you|cya|later)[\s!.]*$/.test(t))
-    return "Goodbye! Feel free to come back anytime. Have a great day!";
+    return "Goodbye! Feel free to come back anytime. See ya!";
   return null;
 }
 
@@ -151,7 +150,7 @@ var FAQS = [
   },
   {
     kw: ["skill", "technology", "tech stack", "language", "what do you know", "what can you do", "framework"],
-    ans: "Zach works with:\n- Frontend: HTML, CSS, JavaScript, React\n- Backend: Python, Flask\n- Tools: Claude API, Git, Vercel, GitHub Pages\n- Design: Affinity Designer\n\nHe is especially strong in web automation and AI integration."
+    ans: "Zach works with:\n- Frontend: HTML, CSS, JavaScript, React\n- Backend: Python, Flask\n- Tools: Claude API, Git, Vercel, GitHub Pages\n- Design: Affinity Designer\n\nHe is strong in web automation and AI integration."
   },
   {
     kw: ["hire", "available", "job", "open to work", "position", "looking for work", "opportunity", "freelance"],
@@ -163,7 +162,7 @@ var FAQS = [
   },
   {
     kw: ["cv", "resume", "experience", "background", "education", "degree", "qualification"],
-    ans: "Zach holds a Computer Science degree and has hands-on experience building real-world apps. His strongest project is a Gmail automation bot using Python and the Claude API."
+    ans: "Zach holds a Computer Science degree and has hands-on experience building real-world apps."
   },
   {
     kw: ["github", "vercel", "deployed", "live site", "link", "url", "where are your projects"],
