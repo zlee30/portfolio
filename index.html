@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zach Lee — Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -43,7 +43,6 @@
         <span class="link">Try it live →</span>
       </a>
 
-      
       <a href="https://expenseszl.vercel.app/" target="_blank" class="project-card">
         <div class="project-image" style="background: #274613; display: flex; align-items: center; justify-content: center;">
           <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#c8f55a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -54,7 +53,7 @@
           </svg>
         </div>
         <h3>Expenses Tracker</h3>
-        <p>A personal monthly expenses tracker with a live doughnut chart breakdown by category, budget tracking with over-budget alerts, and month-by-month navigation. Data persists locally in the browser — no account or server needed. Also includes a print pdf feature. </p>
+        <p>A personal monthly expenses tracker with a live doughnut chart breakdown by category, budget tracking with over-budget alerts, and month-by-month navigation. Data persists locally in the browser — no account or server needed. Also includes a print pdf feature.</p>
         <p class="tech-stack">HTML · CSS · JavaScript · Chart.js</p>
         <span class="link">Try it live →</span>
       </a>
@@ -102,7 +101,7 @@
           </svg>
         </div>
         <h3>Calculator</h3>
-        <p>A calculator web app with smart bracket handling, keyboard support, and a terminal-inspired dark theme. Features adaptive layouts that fill the screen in both portrait and landscape on mobile, with a side-by-side layout for landscape orientation. Built with vanilla HTML, CSS, and JavaScript</p>
+        <p>A calculator web app with smart bracket handling, keyboard support, and a terminal-inspired dark theme. Features adaptive layouts that fill the screen in both portrait and landscape on mobile, with a side-by-side layout for landscape orientation.</p>
         <p class="tech-stack">HTML · CSS · JavaScript</p>
         <span class="link">Try it live →</span>
       </a>
@@ -140,6 +139,68 @@
     </div>
   </div>
 
+  <!-- ══ ZALE CHAT WINDOW ══ -->
+  <div id="chat-window">
+    <div class="chat-header">
+      <div class="chat-avatar">
+        <img src="aipp.png" alt="Zale avatar" />
+      </div>
+      <div class="chat-header-info">
+        <div class="chat-header-name">Zale</div>
+        <div class="chat-header-status">Online</div>
+      </div>
+      <button class="chat-close" onclick="closeChat()" aria-label="Close">&#x2715;</button>
+    </div>
+    <div id="messages"></div>
+    <div id="suggestions">
+      <button class="chip" onclick="sendChip(this.textContent)">Who are you?</button>
+      <button class="chip" onclick="sendChip(this.textContent)">What projects have you built?</button>
+      <button class="chip" onclick="sendChip(this.textContent)">How can I contact Zach?</button>
+    </div>
+    <div class="input-row">
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Ask me anything..."
+        onkeydown="if(event.key==='Enter') sendMsg()"
+      />
+  <button class="send-btn" type="button" onclick="sendMsg()" aria-label="Send">
+  <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="22" y1="2" x2="11" y2="13"/>
+    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+  </svg>
+</button>
+    </div>
+  </div>
+
+  <!-- ══ ZALE LAUNCHER ══ -->
+  <div id="zale-launcher">
+    <div id="boxer-wrap">
+      <img id="boxer-idle"  src="b2u.png" alt="boxer idle" />
+      <img id="boxer-punch" src="b1u.png" alt="boxer punching" />
+    </div>
+    <div id="chat-bubble" onclick="bubbleClick()" aria-label="Open Zale chat">
+      <svg id="bubble-svg" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="chunk-clip" clipPathUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="72" height="72"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#chunk-clip)">
+  <circle cx="36" cy="36" r="33"
+    fill="rgba(30, 100, 255, 0.85)"
+    stroke="rgba(100, 160, 255, 0.6)"
+    stroke-width="2"/>
+</g>
+<path
+  d="M16,22 Q16,19 19,19 H53 Q56,19 56,22 V38 Q56,41 53,41 H40 L33,53 L33,41 H19 Q16,41 16,38 Z"
+  fill="white"/>
+      </svg>
+      <div id="notif-dot"></div>
+    </div>
+  </div>
+
+  <!-- single script tag — handles both portfolio and Zale -->
   <script src="script.js"></script>
 
 </body>
