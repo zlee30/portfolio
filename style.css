@@ -1,175 +1,380 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ══════════════════════════════════════════
+   ZACH LEE — PORTFOLIO  ·  redesigned skin
+   Fonts: Anton (display) + Archivo (body) + IBM Plex Mono (labels)
+   Palette: ink #101216 · paper #F6F6F3 · accent blue #1E3FD8 · orange #F07C2E
+══════════════════════════════════════════ */
+
+:root {
+  --ink:    #101216;
+  --paper:  #F6F6F3;
+  --card:   #FFFFFF;
+  --line:   #E3E4DF;
+  --muted:  #5F6368;
+  --accent: #1E3FD8;
+  --accent2:#F07C2E;
+  --display:'Anton', Impact, sans-serif;
+  --body:   'Archivo', -apple-system, 'Segoe UI', sans-serif;
+  --mono:   'IBM Plex Mono', ui-monospace, monospace;
 }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--body);
   line-height: 1.6;
-  color: #333232;
-  background: #f3f3f3;
+  color: var(--ink);
+  background: var(--paper);
 }
 
+::selection { background: var(--accent); color: #fff; }
+
+/* ── NAVBAR ── */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background: white;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 16px 40px;
+  background: rgba(246, 246, 243, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 .logo {
-  font-weight: 600;
+  font-family: var(--display);
+  font-weight: 400;
   font-size: 18px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 28px;
   list-style: none;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #555;
-  font-size: 14px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.65;
+  position: relative;
+  padding-bottom: 3px;
+  transition: opacity 0.2s;
 }
 
-.nav-links a:hover { color: #000; }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent2);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s;
+}
 
+.nav-links a:hover { opacity: 1; }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+/* ── HERO ── */
 .hero {
   text-align: center;
-  padding: 80px 20px;
-  background: white;
+  padding: 96px 20px 90px;
+  background: var(--paper);
 }
 
 .avatar {
-  width: 120px;
-  height: 120px;
+  width: 128px;
+  height: 128px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto 20px;
+  margin: 0 auto 26px;
   display: block;
-  border: 3px solid white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 4px solid #fff;
+  box-shadow: 0 10px 30px rgba(16, 18, 22, 0.15);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 7px 16px;
+  margin-bottom: 22px;
+}
+
+.status-badge::before {
+  content: '';
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #2FBF71;
+  box-shadow: 0 0 0 3px rgba(47, 191, 113, 0.2);
 }
 
 .hero h1 {
-  font-size: 36px;
-  margin-bottom: 12px;
-}
-
-.tagline {
-  color: #666;
-  font-size: 16px;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.projects, .about, .contact {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 60px 40px;
-}
-
-.projects h2, .about h2, .contact h2 {
-  font-size: 24px;
-  margin-bottom: 30px;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.project-card {
-  background: white;
-  border: 1px solid #e5e5e5;
-  border-radius: 12px;
-  padding: 20px;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s, box-shadow 0.2s;
-  cursor: pointer;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-.project-image {
-  height: 140px;
-  border-radius: 8px;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(44px, 7vw, 76px);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
   margin-bottom: 16px;
 }
 
+.hero h1 em {
+  font-style: normal;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--ink);
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 17px;
+  max-width: 520px;
+  margin: 0 auto 32px;
+}
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 100px;
+  padding: 14px 30px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.btn:active { transform: scale(0.97); }
+
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--ink); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 2px var(--ink);
+}
+.btn-ghost:hover { background: var(--ink); color: #fff; }
+
+/* ── SECTIONS ── */
+.projects, .about, .contact {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 70px 40px;
+}
+
+.section-kicker {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.projects h2, .about h2, .contact h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(28px, 4vw, 40px);
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: 34px;
+}
+
+/* ── PROJECT CARDS ── */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(16, 18, 22, 0.1);
+  border-color: var(--accent);
+}
+
+.project-image {
+  height: 150px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+/* if you later swap the SVG icons for real screenshots: */
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+.project-card:hover .project-image img { transform: scale(1.05); }
+
 .project-card h3 {
-  font-size: 16px;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 19px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   margin-bottom: 8px;
 }
 
 .project-card p {
   font-size: 14px;
-  color: #666;
+  color: var(--muted);
   margin-bottom: 16px;
 }
 
 .tech-stack {
-  font-size: 12px;
-  color: #888;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
   margin-bottom: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.08em;
+  margin-top: auto;   /* pins stack + link to the card bottom */
 }
 
 .link {
-  color: #185FA5;
+  color: var(--accent);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
+.project-card:hover .link { color: var(--accent2); }
+
+/* ── ABOUT ── */
 .about p {
-  color: #444;
+  color: #3C4046;
   max-width: 700px;
+  font-size: 16px;
+  margin-bottom: 24px;
 }
 
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-chips span {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 7px 16px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.skill-chips span:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ── CONTACT ── */
 .contact-links {
   display: flex;
-  gap: 20px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
 .contact-links a {
-  color: #185FA5;
+  color: var(--ink);
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 12px 26px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
-.contact-links a:hover { text-decoration: underline; }
+.contact-links a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
 
 footer {
   text-align: center;
-  padding: 30px;
-  color: #999;
+  padding: 34px;
+  color: #9A9DA2;
   font-size: 13px;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid var(--line);
 }
 
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ── MOBILE ── */
 @media (max-width: 600px) {
-  .navbar { padding: 15px 20px; }
-  .nav-links { gap: 15px; }
-  .projects, .about, .contact { padding: 40px 20px; }
-  .hero h1 { font-size: 28px; }
+  .navbar { padding: 14px 20px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 12px; }
+  .projects, .about, .contact { padding: 48px 20px; }
+  .hero { padding: 70px 20px 64px; }
 }
 
-/* Gallery - z-index lowered so Zale sits above it */
+/* ══════════════════════════════
+   GALLERY  (unchanged behavior)
+══════════════════════════════ */
 .gallery {
   display: none;
   position: fixed;
@@ -224,13 +429,14 @@ footer {
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
+  font-family: inherit;
 }
 
 .gallery-nav button:hover { background: #ddd; }
 
 
 /* ══════════════════════════════
-   ZALE AI ASSISTANT
+   ZALE AI ASSISTANT  (unchanged behavior)
 ══════════════════════════════ */
 
 #zale-launcher {

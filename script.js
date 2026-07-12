@@ -6,6 +6,14 @@ const galleries = {
   'email-bot': [
     'images/sscmd.png',
     'images/ssgmail.png'
+  ],
+  'zale': [
+    'ss1.png',
+    'ss2.png',
+    'ss3.png',
+    'ss4.png',
+    'ss5.png',
+    'ss6.png',
   ]
 };
 
@@ -136,7 +144,11 @@ var PROJECTS = [
   {
     kw: ["gmail", "email bot", "automation bot", "gmail bot", "automation", "email automation"],
     ans: "Gmail Automation Bot\n\nZach's most impressive project. Connects to Gmail via OAuth2 and uses the Claude API to automatically read, categorise, and respond to emails with no manual input needed.\n\nBuilt with: Python, Gmail API, Claude API (Anthropic)\nAuth: OAuth2"
-  }
+  },
+  {
+    kw: ["clipper", "zaleclip", "zale clip", "ai clipper", "clip", "shorts", "tiktok", "reels", "video editor"],
+    ans: "Zale AI Clipper\n\nA self-hosted web app that turns long videos into ready-to-post vertical clips. Paste a YouTube or TikTok link and the pipeline transcribes the footage with Whisper, uses Claude to find the most engaging moments, and renders 9:16 clips with word-by-word karaoke captions, GPU-accelerated via NVENC. Also includes a multi-source cut editor, a ranking video maker, AI voiceovers, and script-to-video generation.\n\nBuilt with: Python, FastAPI, FFmpeg, Whisper, Claude API\nHosted: self-hosted with password-protected remote access over Tailscale"
+  },
 ];
 
 var FAQS = [
@@ -146,8 +158,9 @@ var FAQS = [
   },
   {
     kw: ["project", "built", "portfolio", "what have you made", "show me your work", "apps", "build", "all projects"],
-    ans: "Zach has built several projects including:\n- RS11V Product Page - interactive e-commerce concept with zoomable feature hotspots\n- Boxing Timer - countdown and stopwatch with Web Audio API\n- Calculator - keyboard support, terminal aesthetic\n- Expenses Tracker - Chart.js, BHD currency, dark theme\n- Gmail Automation Bot - Python and Claude API\n\nAsk me about any specific project for more details!"
+   ans: "Zach has built several projects including:\n- RS11V Product Page - interactive e-commerce concept with zoomable feature hotspots\n- Zale AI Clipper - turns long videos into vertical clips with AI (Whisper + Claude + FFmpeg)\n- Boxing Timer - countdown and stopwatch with Web Audio API\n- Calculator - keyboard support, terminal aesthetic\n- Expenses Tracker - Chart.js, BHD currency, dark theme\n- Gmail Automation Bot - Python and Claude API\n\nAsk me about any specific project for more details!"
   },
+  
   {
     kw: ["contact", "email", "reach", "message", "get in touch", "how do i find", "where can i find"],
     ans: "You can reach Zach directly via email at zlee337.zl@gmail.com\n\nHe is also available through his portfolio site and LinkedIn. He is actively looking for developer roles and open to freelance work and collaborations."
@@ -172,6 +185,7 @@ var FAQS = [
     kw: ["github", "vercel", "deployed", "live site", "link", "url", "where are your projects"],
     ans: "Zach's projects are hosted at github.com/zlee30/portfolio and deployed via Vercel and GitHub Pages. You can browse his code and live demos from there."
   }
+  
 ];
 
 function getReply(txt) {
