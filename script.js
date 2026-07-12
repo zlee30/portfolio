@@ -118,6 +118,10 @@ function getThanks(txt) {
 
 var PROJECTS = [
   {
+    kw: ["rs11v", "glove", "product page", "sparring", "e-commerce", "ecommerce", "boxing glove", "website", "rs11" , "shop", "product"],
+    ans: "RS11V Product Page\n\n An interactive e-commerce concept for a sparring glove. Clickable hotspots zoom into each feature across different photo angles, with a thumbnail gallery, six live colorway previews, scroll-driven animation, and a mock checkout with phone and country validation.\n\nBuilt with: HTML, CSS, vanilla JavaScript\nDeployed on: Vercel"
+  },
+  {
     kw: ["boxing timer", "boxing", "timer"],
     ans: "Boxing Timer\n\nA dual-mode countdown and stopwatch tool built for boxing workouts. Features round timing, rest periods, and audio cues with no third-party libraries needed.\n\nBuilt with: HTML, CSS, vanilla JavaScript, Web Audio API\nDeployed on: Vercel"
   },
@@ -142,7 +146,7 @@ var FAQS = [
   },
   {
     kw: ["project", "built", "portfolio", "what have you made", "show me your work", "apps", "build", "all projects"],
-    ans: "Zach has built several projects including:\n- Boxing Timer - countdown and stopwatch with Web Audio API\n- Calculator - keyboard support, terminal aesthetic\n- Expenses Tracker - Chart.js, BHD currency, dark theme\n- Gmail Automation Bot - Python and Claude API\n\nAsk me about any specific project for more details!"
+    ans: "Zach has built several projects including:\n- RS11V Product Page - interactive e-commerce concept with zoomable feature hotspots\n- Boxing Timer - countdown and stopwatch with Web Audio API\n- Calculator - keyboard support, terminal aesthetic\n- Expenses Tracker - Chart.js, BHD currency, dark theme\n- Gmail Automation Bot - Python and Claude API\n\nAsk me about any specific project for more details!"
   },
   {
     kw: ["contact", "email", "reach", "message", "get in touch", "how do i find", "where can i find"],
