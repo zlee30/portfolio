@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zach Lee — CV or portfolio</title>
+<meta name="description" content="Pick one: Zach Lee's CV, or his portfolio of projects.">
+<meta name="theme-color" content="#16283C">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ring:#16283C;
+    --ring-deep:#0F1C2C;
+    --canvas:#E4DFD2;
+    --canvas-dim:#9AA3AE;
+    --ink:#101820;
+    --slate:#5A6069;
+    --red:#C0392B;
+    --blue:#2E6BB0;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+
+  body{
+    background:radial-gradient(90% 60% at 50% -10%, #24405E 0%, var(--ring) 45%, var(--ring-deep) 100%);
+    background-attachment:fixed;
+    color:var(--canvas);
+    font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* three ropes across the top — the only ornament on the page */
+  .ropes{
+    position:absolute;
+    top:clamp(1.5rem,6vh,3rem);
+    left:0;right:0;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+    pointer-events:none;
+  }
+  .ropes span{
+    display:block;
+    height:2px;
+    background:var(--canvas);
+    transform-origin:left center;
+    animation:draw .7s cubic-bezier(.2,.7,.3,1) backwards;
+  }
+  .ropes span:nth-child(1){opacity:.30}
+  .ropes span:nth-child(2){opacity:.18;animation-delay:.06s}
+  .ropes span:nth-child(3){opacity:.10;animation-delay:.12s}
+
+  main{
+    position:relative;
+    min-height:100%;
+    max-width:720px;
+    margin:0 auto;
+    padding:clamp(1.25rem,5vw,2.5rem);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:clamp(1.75rem,5vh,2.75rem);
+  }
+
+  .tagline{
+    font-family:'IBM Plex Mono',ui-monospace,monospace;
+    font-size:.7rem;
+    font-weight:500;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--canvas-dim);
+    margin-bottom:.85rem;
+  }
+
+  h1{
+    font-family:'Big Shoulders Display','Arial Narrow',sans-serif;
+    font-weight:800;
+    font-size:clamp(3.4rem,17vw,5.75rem);
+    line-height:.82;
+    letter-spacing:-.015em;
+    text-transform:uppercase;
+  }
+
+  .bill{animation:rise .55s ease-out backwards}
+
+  .choices{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:.85rem;
+  }
+  @media (min-width:640px){
+    .choices{grid-template-columns:1fr 1fr}
+  }
+
+  .slot{animation:rise .55s ease-out backwards}
+  .slot:nth-child(1){animation-delay:.14s}
+  .slot:nth-child(2){animation-delay:.22s}
+
+  .choice{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    gap:.3rem;
+    height:100%;
+    min-height:min(30vh,190px);
+    padding:1.15rem 1.15rem 1.05rem;
+    background:var(--canvas);
+    color:var(--ink);
+    text-decoration:none;
+    border-radius:3px;
+    overflow:hidden;
+    box-shadow:0 10px 28px rgba(0,0,0,.38);
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .choice:hover,.choice:focus-visible{
+    transform:translateY(-4px);
+    box-shadow:0 20px 44px rgba(0,0,0,.5);
+  }
+  .choice:active{transform:translateY(-1px)}
+  .choice:focus-visible{outline:3px solid var(--canvas);outline-offset:4px}
+
+  .choice--cv{--accent:var(--red)}
+  .choice--work{--accent:var(--blue)}
+
+  /* corner pad */
+  .pad{
+    position:absolute;
+    top:0;left:0;
+    width:58px;height:58px;
+    background:var(--accent);
+    clip-path:polygon(0 0,100% 0,0 100%);
+    transition:width .22s ease,height .22s ease;
+  }
+  .choice:hover .pad,.choice:focus-visible .pad{width:76px;height:76px}
+
+  .word{
+    font-family:'Big Shoulders Display','Arial Narrow',sans-serif;
+    font-weight:800;
+    font-size:clamp(2.5rem,10vw,3.4rem);
+    line-height:.88;
+    letter-spacing:-.01em;
+    text-transform:uppercase;
+  }
+
+  .meta{
+    font-family:'IBM Plex Mono',ui-monospace,monospace;
+    font-size:.68rem;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--slate);
+  }
+
+  .go{
+    margin-top:.75rem;
+    display:inline-flex;
+    align-items:center;
+    gap:.45rem;
+    font-family:'IBM Plex Mono',ui-monospace,monospace;
+    font-size:.7rem;
+    font-weight:500;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+  .go::after{
+    content:"→";
+    transition:transform .18s ease;
+  }
+  .choice:hover .go::after,.choice:focus-visible .go::after{transform:translateX(4px)}
+
+  .foot{
+    font-family:'IBM Plex Mono',ui-monospace,monospace;
+    font-size:.66rem;
+    letter-spacing:.11em;
+    text-transform:uppercase;
+    color:var(--canvas-dim);
+    opacity:.75;
+  }
+
+  @keyframes draw{
+    from{transform:scaleX(0)}
+    to{transform:scaleX(1)}
+  }
+  @keyframes rise{
+    from{opacity:0;transform:translateY(14px)}
+    to{opacity:1;transform:none}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+  }
+</style>
+</head>
+<body>
+
+<div class="ropes" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<main>
+  <header class="bill">
+    <p class="tagline">Software developer · Bahrain</p>
+    <h1>Zach<br>Lee</h1>
+  </header>
+
+  <nav class="choices" aria-label="Choose what to open">
+    <div class="slot">
+      <a class="choice choice--cv" href="https://zlee30.github.io/portfolio/ZacharyLeeCV26.pdf" target="_blank" rel="noopener">
+        <span class="pad" aria-hidden="true"></span>
+        <span class="word">CV</span>
+        <span class="meta">PDF · one page</span>
+        <span class="go">Open CV</span>
+      </a>
+    </div>
+
+    <div class="slot">
+      <a class="choice choice--work" href="https://zlee30.github.io/portfolio/" target="_blank" rel="noopener">
+        <span class="pad" aria-hidden="true"></span>
+        <span class="word">Portfolio</span>
+        <span class="meta">Live projects · source</span>
+        <span class="go">Open portfolio</span>
+      </a>
+    </div>
+  </nav>
+
+  <p class="foot">Both open in a new tab.</p>
+</main>
+
+</body>
+</html>
