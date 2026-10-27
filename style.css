@@ -261,6 +261,8 @@ body {
   margin-bottom: 8px;
 }
 
+.project-card p strong { color: var(--ink); font-weight: 600; }
+
 .project-card p {
   font-size: 14px;
   color: var(--muted);
@@ -736,4 +738,32 @@ footer {
 @keyframes zale-bounce {
   0%, 60%, 100% { transform: translateY(0); }
   30%           { transform: translateY(-5px); }
+}
+/* ══════════════════════════════════════════
+   NEW PROJECT CARDS — CSS-drawn covers
+══════════════════════════════════════════ */
+.card-tag {
+  align-self: flex-start;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  border: 1px solid currentColor;
+  border-radius: 100px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+
+.cover { position: relative; display: flex; }
+
+.project-note {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+  background: var(--paper);
+  border-left: 3px solid var(--accent2);
+  border-radius: 6px;
+  padding: 8px 10px;
 }

@@ -42,6 +42,54 @@
     <h2>My projects</h2>
     <div class="project-grid">
 
+      <div class="project-card" onclick="openGallery('zale-assist')">
+        <div class="project-image">
+          <img src="images/zacover.jpg" alt="Zale Assist customer dashboard showing a list of support tickets">
+        </div>
+        <span class="card-tag">New · Full-stack</span>
+        <h3>Zale Assist — Support Ticket System</h3>
+        <p>A full-stack help desk I built end to end, from the database to the UI. Customers sign up, submit tickets with a priority, and follow them from Open to In Progress to Resolved. Agents pick tickets up and reply in threaded conversations, a notification bell flags new activity, and admins get a live overview of total, open, unassigned and resolved tickets plus user counts.</p>
+        <p>Under the hood: a FastAPI REST API (documented in Swagger), SQLAlchemy over a SQLite database, JWT login with bcrypt-hashed passwords, and three roles (customer, agent, admin) with permissions checked on the server. It also has IDOR protection, rate limiting and input validation. The frontend is a vanilla JS single-page app with a glass UI.</p>
+        <p class="project-note">Test project: the server runs locally on my laptop, so there's no public link. Click to see it in action.</p>
+        <p class="tech-stack">Python · FastAPI · SQLAlchemy · SQLite · JWT · JavaScript</p>
+        <span class="link">View screenshots</span>
+      </div>
+
+      <div class="project-card" onclick="openGallery('email-bot')">
+        <div class="project-image">
+  <img src="emailcover.png" alt="AI email responder bot">
+</div>
+        <h3>AI email responder bot</h3>
+        <p>A Gmail automation pipeline built in Python that authenticates via Google Cloud, fetches unread messages through the Gmail API, and generates tailored responses.</p>
+        <p class="tech-stack">Python · Gmail API · Google Cloud · Claude</p>
+        <span class="link">View screenshots</span>
+      </div>
+
+      <div class="project-card" onclick="openGallery('zaletimer')">
+        <div class="project-image">
+          <img src="images/ztcover.jpg" alt="ZaleTimer app: the main round timer between two settings screens">
+        </div>
+        <span class="card-tag">New · Native iOS</span>
+        <h3>ZaleTimer — iOS Boxing Timer</h3>
+        <p>A native iPhone and iPad round timer I designed and built from scratch in SwiftUI, modelled on a real gym timer. Glowing seven-segment displays show the round in red, rest in green and the round count in white, with a progress outline that runs around the main timer. Glossy START and STOP buttons press in like real hardware: STOP pauses the round and holding it resets. The layout switches between portrait and landscape, and a Live Activity keeps the timer on the lock screen.</p>
+        <p>The settings let you make it your own. There are Dark, Light, LCD and Custom themes, colour presets, and per-part colours with a live preview. You can adjust digit size and brightness, pick Chrome, Panel or Glow button styles, and set values by swiping or by tapping to type. Training options include a get-ready countdown, a 10-second warning and final 3-second countdown with selectable sounds, a finish bell, vibration, dimming during rest, and lowering your music so the bell cuts through.</p>
+        <p class="tech-stack">Swift · SwiftUI · ActivityKit · AVFoundation · Xcode</p>
+        <span class="link">View screenshots</span>
+      </div>
+
+      <div class="project-card" onclick="openGallery('zjapan')">
+        <div class="project-image">
+          <img src="images/zjcover.jpg" alt="ZJapan app screens: Talk translator, currency rates, map and Backpack">
+        </div>
+        <span class="card-tag">New · Native iOS</span>
+        <h3>ZJapan — Travel Companion App</h3>
+        <p>A six-tab iPhone app I designed and built for my own 10-day trip to Japan, then used every day while I was there. <strong>Talk</strong> translates English and Japanese by voice or keyboard, reads both sides aloud, and shows the Japanese full screen to hand to someone. <strong>Snap</strong> turns a photo of a sign or menu into text. <strong>Rates</strong> converts yen to other currencies, with quick-amount buttons.</p>
+        <p><strong>Time &amp; Weather</strong> has world clocks for home and family plus hourly and 7-day forecasts. <strong>Explore</strong> is a live map with my own hand-drawn avatar, search, one-tap Food, Konbini, Supermarket and Cafe filters, directions, and a "Take me home" button. <strong>Backpack</strong> holds emergency numbers, scanned travel documents kept on the phone, a 42-phrase audio phrasebook and a trip wallet.</p>
+        <p class="project-note">Built to save mobile data: translation runs on the device, and rates and forecasts are cached for offline use and refresh themselves only on Wi-Fi.</p>
+        <p class="tech-stack">Swift · SwiftUI · MapKit · Vision · VisionKit · Translation · Claude API</p>
+        <span class="link">View screenshots</span>
+      </div>
+
       <a href="https://rs11vweb.vercel.app/" target="_blank" class="project-card">
         <div class="project-image">
   <img src="rs11vcover.png" alt="RS11V product page">
@@ -49,67 +97,57 @@
         <h3>RS11V Product Website</h3>
         <p>An interactive e-commerce concept for a boxing glove. Clickable hotspots zoom into product features across multiple photo angles, with a thumbnail gallery, six live colorway previews, scroll-driven motion, and a mock checkout with phone and country validation. Built as a design/UX study.</p>
         <p class="tech-stack">HTML · CSS · JavaScript</p>
-        <span class="link">Try it live →</span>
+        <span class="link">Try it live</span>
       </a>
 
       <a href="https://boxing-timer-rho.vercel.app/" target="_blank" class="project-card">
         <div class="project-image">
-  <img src="timercover.png" alt="RS11V product page">
+  <img src="timercover.png" alt="Boxing Timer web app">
 </div>
         <h3>Boxing Timer</h3>
         <p>An interval timer and stopwatch for boxing or any training. Set round and rest time using arrows or by typing. Timer auto-cycles through rounds and rest periods until stopped. One-button switch to stopwatch mode with unlimited lap recording fastest lap highlighted green, slowest red. Sound effects throughout.</p>
         <p class="tech-stack">HTML · CSS · JavaScript</p>
-        <span class="link">Try it live →</span>
+        <span class="link">Try it live</span>
       </a>
 
       <a href="https://expenseszl.vercel.app/" target="_blank" class="project-card">
         <div class="project-image">
-  <img src="xpcover.png" alt="RS11V product page">
+  <img src="xpcover.png" alt="Expenses Tracker">
 </div>
         <h3>Expenses Tracker</h3>
         <p>A personal monthly expenses tracker with a live doughnut chart breakdown by category, budget tracking with over-budget alerts, and month-by-month navigation. Data persists locally in the browser with no account or server needed. Also includes a print pdf feature.</p>
         <p class="tech-stack">HTML · CSS · JavaScript · Chart.js</p>
-        <span class="link">Try it live →</span>
+        <span class="link">Try it live</span>
       </a>
-
-      <div class="project-card" onclick="openGallery('email-bot')">
-        <div class="project-image">
-  <img src="emailcover.png" alt="RS11V product page">
-</div>
-        <h3>AI email responder bot</h3>
-        <p>A Gmail automation pipeline built in Python that authenticates via Google Cloud, fetches unread messages through the Gmail API, and generates tailored responses.</p>
-        <p class="tech-stack">Python · Gmail API · Google Cloud · Claude</p>
-        <span class="link">View screenshots →</span>
-      </div>
 
       <a href="https://github.com/zlee30/portfolio/blob/main/README.md" target="_blank" class="project-card">
         <div class="project-image">
-  <img src="portcover.png" alt="RS11V product page">
+  <img src="portcover.png" alt="Portfolio website">
 </div>
         <h3>This portfolio website</h3>
         <p>The site you're looking at right now is built from scratch with HTML, CSS, and JavaScript to showcase my work. Features a responsive design and interactive project gallery.</p>
         <p class="tech-stack">HTML · CSS · JavaScript</p>
-        <span class="link">View on GitHub →</span>
+        <span class="link">View on GitHub</span>
       </a>
 
       <a href="projects/calculator/index.html" target="_blank" class="project-card">
         <div class="project-image">
-  <img src="calccover.png" alt="RS11V product page">
+  <img src="calccover.png" alt="Calculator app">
 </div>
         <h3>Calculator</h3>
         <p>A calculator web app with smart bracket handling, keyboard support, and a terminal-inspired dark theme. Features adaptive layouts that fill the screen in both portrait and landscape on mobile, with a side-by-side layout for landscape orientation.</p>
         <p class="tech-stack">HTML · CSS · JavaScript</p>
-        <span class="link">Try it live →</span>
+        <span class="link">Try it live</span>
       </a>
 
       <div class="project-card">
         <div class="project-image">
-  <img src="ai2.png" alt="RS11V product page">
+  <img src="ai2.png" alt="Zale portfolio assistant">
 </div>
         <h3>Zale — AI Portfolio Assistant</h3>
         <p>A rule-based AI chat assistant built into this portfolio. Combines two of my interests boxing and art through a hand-drawn boxer character that punches the chat bubble open. Features punch animation, and FAQ responses covering projects, skills, and contact info.</p>
         <p class="tech-stack">HTML · CSS · JavaScript</p>
-        <span class="link">Try it — click the bubble →</span>
+        <span class="link">Try it — click the bubble</span>
       </div>
       <div class="project-card" onclick="openGallery('zale')">
         <div class="project-image">
@@ -118,14 +156,11 @@
         <h3>ZaleClip — AI Clipper</h3>
         <p>A self-hosted web app that turns long videos into ready-to-post vertical clips. Paste YouTube or TikTok links and the AI pipeline transcribes the footage (Whisper), finds the most engaging moments (Claude), and renders 9:16 clips with word-by-word karaoke captions, GPU-accelerated via NVENC. Also includes a multi-source cut editor, a ranking video maker with live preview, AI voiceovers (ElevenLabs), and script-to-video generation. Security-hardened input validation, password-protected remote access over Tailscale, and persistent local storage.</p>
         <p class="tech-stack">Python · FastAPI · FFmpeg · Whisper · Claude API</p>
-        <span class="link">View screenshots →</span>
+        <span class="link">View screenshots</span>
       </div>
 
-    </div>  <!-- this is the existing </div> that closes .project-grid -->
-
     </div>
-
-    
+  </section>
 
   <section id="about" class="about">
     <span class="section-kicker">About</span>
@@ -134,6 +169,7 @@
     <div class="skill-chips">
       <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span>
       <span>React</span><span>Claude API</span><span>Chart.js</span><span>Git</span>
+      <span>Swift</span><span>SwiftUI</span><span>FastAPI</span><span>SQL</span>
       <span>Vercel</span><span>Affinity Designer</span>
       <span>Canva</span>
     </div>

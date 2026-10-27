@@ -3,6 +3,29 @@
 // ══════════════════════════════
 
 const galleries = {
+  'zaletimer': [
+    'images/zt1-timer.jpg',
+    'images/zt2-custom-theme.jpg',
+    'images/zt3-lcd-theme.jpg',
+    'images/zt4-display.jpg',
+    'images/zt5-sounds.jpg',
+  ],
+  'zjapan': [
+    'images/zj1-talk.jpg',
+    'images/zj2-snap.jpg',
+    'images/zj3-rates.jpg',
+    'images/zj4-weather.jpg',
+    'images/zj5-forecast.jpg',
+    'images/zj6-explore.jpg',
+    'images/zj7-backpack.jpg',
+  ],
+  'zale-assist': [
+    'images/za1-login.jpg',
+    'images/za2-dashboard.jpg',
+    'images/za3-new-ticket.jpg',
+    'images/za4-admin.jpg',
+    'images/za5-api.jpg'
+  ],
   'email-bot': [
     'images/sscmd.png',
     'images/ssgmail.png'
@@ -126,6 +149,18 @@ function getThanks(txt) {
 
 var PROJECTS = [
   {
+    kw: ["zale assist", "zaleassist", "ticket", "support system", "help desk", "helpdesk", "fastapi", "full-stack", "full stack", "backend", "database"],
+    ans: "Zale Assist\n\nA full-stack support ticket system. Customers submit tickets with a priority and track them from Open to In Progress to Resolved. Agents reply in threaded conversations, a notification bell flags new activity, and admins get a live overview dashboard with ticket and user stats.\n\nThe backend is a FastAPI REST API with a SQLite database (via SQLAlchemy), JWT login with bcrypt hashing, role-based permissions for customers, agents and admins, IDOR protection, and rate limiting. The frontend is a vanilla JS single-page app.\n\nIt is a test project, so the server runs locally on Zach's laptop. Click the card to see screenshots.\n\nBuilt with: Python, FastAPI, SQLAlchemy, SQLite, JWT, JavaScript"
+  },
+  {
+    kw: ["zaletimer", "zale timer", "ios timer", "iphone timer", "swiftui timer", "live activity"],
+    ans: "ZaleTimer\n\nA native iPhone and iPad boxing round timer Zach designed and built in SwiftUI. Glowing seven-segment displays show the round in red, rest in green and the round count in white, with a progress outline and glossy START and STOP buttons (hold STOP to reset). It works in portrait and landscape and shows a Live Activity on the lock screen.\n\nSettings include Dark, Light, LCD and Custom themes with colour presets, digit size and brightness, three button styles, swipe or tap-to-type value entry, a get-ready countdown, 10-second and 3-second warnings with selectable sounds, a finish bell, vibration, dimming during rest, and lowering music for the bell.\n\nBuilt with: Swift, SwiftUI, ActivityKit, Xcode"
+  },
+  {
+    kw: ["zjapan", "japan", "travel", "translate", "translation", "trip"],
+    ans: "ZJapan\n\nA six-tab iPhone app Zach designed and built for his own 10-day trip to Japan, then used every day there.\n- Talk: English-Japanese voice and text translation, read aloud, with a full-screen mode to show locals\n- Snap: photo of a sign or menu to text\n- Rates: converts yen to other currencies\n- Time & Weather: world clocks plus hourly and 7-day forecasts\n- Explore: live map with his hand-drawn avatar, nearby food, konbini, supermarkets and cafes, directions, and Take me home\n- Backpack: emergency numbers, scanned documents saved on the phone, a phrasebook with audio, and a trip wallet\n\nIt is built to save mobile data: translation runs on the device, and rates and weather are cached offline.\n\nBuilt with: Swift, SwiftUI, MapKit, Vision, VisionKit, Apple Translation, Claude API"
+  },
+  {
     kw: ["rs11v", "glove", "product page", "sparring", "e-commerce", "ecommerce", "boxing glove", "website", "rs11" , "shop", "product"],
     ans: "RS11V Product Page\n\n An interactive e-commerce concept for a sparring glove. Clickable hotspots zoom into each feature across different photo angles, with a thumbnail gallery, six live colorway previews, scroll-driven animation, and a mock checkout with phone and country validation.\n\nBuilt with: HTML, CSS, vanilla JavaScript\nDeployed on: Vercel"
   },
@@ -158,7 +193,7 @@ var FAQS = [
   },
   {
     kw: ["project", "built", "portfolio", "what have you made", "show me your work", "apps", "build", "all projects"],
-   ans: "Zach has built several projects including:\n- RS11V Product Page - interactive e-commerce concept with zoomable feature hotspots\n- Zale AI Clipper - turns long videos into vertical clips with AI (Whisper + Claude + FFmpeg)\n- Boxing Timer - countdown and stopwatch with Web Audio API\n- Calculator - keyboard support, terminal aesthetic\n- Expenses Tracker - Chart.js, BHD currency, dark theme\n- Gmail Automation Bot - Python and Claude API\n\nAsk me about any specific project for more details!"
+   ans: "Zach has built several projects including:\n- Zale Assist - full-stack support ticket system (FastAPI, JWT, SQL)\n- ZaleTimer - native iOS boxing timer in SwiftUI\n- ZJapan - native iOS travel companion for Japan\n- RS11V Product Page - interactive e-commerce concept with zoomable feature hotspots\n- Zale AI Clipper - turns long videos into vertical clips with AI (Whisper + Claude + FFmpeg)\n- Boxing Timer - countdown and stopwatch with Web Audio API\n- Calculator - keyboard support, terminal aesthetic\n- Expenses Tracker - Chart.js, BHD currency, dark theme\n- Gmail Automation Bot - Python and Claude API\n\nAsk me about any specific project for more details!"
   },
   
   {
@@ -167,7 +202,7 @@ var FAQS = [
   },
   {
     kw: ["skill", "technology", "tech stack", "language", "what do you know", "what can you do", "framework"],
-    ans: "Zach works with:\n- Frontend: HTML, CSS, JavaScript, React\n- Backend: Python, Flask\n- Tools: Claude API, Git, Vercel, GitHub Pages\n- Design: Affinity Designer\n\nHe is strong in web automation and AI integration."
+    ans: "Zach works with:\n- Frontend: HTML, CSS, JavaScript, React\n- Backend: Python, FastAPI, Flask, SQLAlchemy, SQL\n- iOS: Swift, SwiftUI\n- Tools: Claude API, Git, Vercel, GitHub Pages\n- Design: Affinity Designer\n\nHe is strong in web automation and AI integration."
   },
   {
     kw: ["hire", "available", "job", "open to work", "position", "looking for work", "opportunity", "freelance"],
