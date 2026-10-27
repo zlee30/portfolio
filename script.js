@@ -178,7 +178,7 @@ var PROJECTS = [
   },
   {
     kw: ["gmail", "email bot", "automation bot", "gmail bot", "automation", "email automation"],
-    ans: "Gmail Automation Bot\n\nZach's most impressive project. Connects to Gmail via OAuth2 and uses the Claude API to automatically read, categorise, and respond to emails with no manual input needed.\n\nBuilt with: Python, Gmail API, Claude API (Anthropic)\nAuth: OAuth2"
+    ans: "Gmail Automation Bot\n\nA Python bot that answers Zach's Gmail inbox for him. It signs in through Google Cloud with OAuth 2.0, fetches unread messages with the Gmail API, and uses the Claude API to read each email and write a reply that fits it, then sends it automatically with no typing needed. Credentials and API keys are kept in a .env file and excluded from GitHub.\n\nBuilt with: Python, Gmail API, Google Cloud, OAuth 2.0, Claude API"
   },
   {
     kw: ["clipper", "zaleclip", "zale clip", "ai clipper", "clip", "shorts", "tiktok", "reels", "video editor"],

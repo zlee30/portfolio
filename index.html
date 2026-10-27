@@ -60,8 +60,9 @@
   <img src="emailcover.png" alt="AI email responder bot">
 </div>
         <h3>AI email responder bot</h3>
-        <p>A Gmail automation pipeline built in Python that authenticates via Google Cloud, fetches unread messages through the Gmail API, and generates tailored responses.</p>
-        <p class="tech-stack">Python · Gmail API · Google Cloud · Claude</p>
+        <p>A Python bot that answers my Gmail inbox for me. It signs in securely through Google Cloud with OAuth 2.0, pulls in unread messages through the Gmail API, and passes each one to the Claude API, which reads the email and writes a reply that fits what was asked, such as thanking someone for reaching out or confirming an application was received. The reply is sent back automatically, so nothing has to be typed by hand.</p>
+        <p>It runs from the command line with a single command. API keys and Google credentials are kept out of the code in a .env file and left out of GitHub with .gitignore, so no secrets are ever published.</p>
+        <p class="tech-stack">Python · Gmail API · Google Cloud · OAuth 2.0 · Claude API</p>
         <span class="link">View screenshots</span>
       </div>
 
@@ -87,6 +88,16 @@
         <p><strong>Time &amp; Weather</strong> has world clocks for home and family plus hourly and 7-day forecasts. <strong>Explore</strong> is a live map with my own hand-drawn avatar, search, one-tap Food, Konbini, Supermarket and Cafe filters, directions, and a "Take me home" button. <strong>Backpack</strong> holds emergency numbers, scanned travel documents kept on the phone, a 42-phrase audio phrasebook and a trip wallet.</p>
         <p class="project-note">Built to save mobile data: translation runs on the device, and rates and forecasts are cached for offline use and refresh themselves only on Wi-Fi.</p>
         <p class="tech-stack">Swift · SwiftUI · MapKit · Vision · VisionKit · Translation · Claude API</p>
+        <span class="link">View screenshots</span>
+      </div>
+
+      <div class="project-card" onclick="openGallery('zale')">
+        <div class="project-image">
+          <img src="ss1.png" alt="Zale AI Clipper interface">
+        </div>
+        <h3>ZaleClip — AI Clipper</h3>
+        <p>A self-hosted web app that turns long videos into ready-to-post vertical clips. Paste YouTube or TikTok links and the AI pipeline transcribes the footage (Whisper), finds the most engaging moments (Claude), and renders 9:16 clips with word-by-word karaoke captions, GPU-accelerated via NVENC. Also includes a multi-source cut editor, a ranking video maker with live preview, AI voiceovers (ElevenLabs), and script-to-video generation. Security-hardened input validation, password-protected remote access over Tailscale, and persistent local storage.</p>
+        <p class="tech-stack">Python · FastAPI · FFmpeg · Whisper · Claude API</p>
         <span class="link">View screenshots</span>
       </div>
 
@@ -148,15 +159,6 @@
         <p>A rule-based AI chat assistant built into this portfolio. Combines two of my interests boxing and art through a hand-drawn boxer character that punches the chat bubble open. Features punch animation, and FAQ responses covering projects, skills, and contact info.</p>
         <p class="tech-stack">HTML · CSS · JavaScript</p>
         <span class="link">Try it — click the bubble</span>
-      </div>
-      <div class="project-card" onclick="openGallery('zale')">
-        <div class="project-image">
-          <img src="ss1.png" alt="Zale AI Clipper interface">
-        </div>
-        <h3>ZaleClip — AI Clipper</h3>
-        <p>A self-hosted web app that turns long videos into ready-to-post vertical clips. Paste YouTube or TikTok links and the AI pipeline transcribes the footage (Whisper), finds the most engaging moments (Claude), and renders 9:16 clips with word-by-word karaoke captions, GPU-accelerated via NVENC. Also includes a multi-source cut editor, a ranking video maker with live preview, AI voiceovers (ElevenLabs), and script-to-video generation. Security-hardened input validation, password-protected remote access over Tailscale, and persistent local storage.</p>
-        <p class="tech-stack">Python · FastAPI · FFmpeg · Whisper · Claude API</p>
-        <span class="link">View screenshots</span>
       </div>
 
     </div>
